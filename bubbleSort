@@ -1,0 +1,15 @@
+public static int[] bubbleSort(int[] thisArray) { 
+		int size = thisArray.length; 
+		for (int i = 0; i < size - 1; i++) { 
+			for (int j = 0; j < size - 1; j++) { 
+				if (thisArray[j] > thisArray[j+1]) { 
+					int temp = thisArray[j]; 
+					thisArray[j] = thisArray[j+1];
+					thisArray[j+1] = temp; 
+				}
+			}
+		
+		}
+		
+		return thisArray; 
+	}
