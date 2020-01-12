@@ -1,0 +1,9 @@
+  public static int[] createArray(int n) {  // create random array of length n 
+		int [] newArray = new int[n]; 
+		int min = 0; 
+		int max = 100; 
+		for (int i = 0; i < n; i++ ) { 
+			newArray[i] = (int)(Math.random()*((max - min) + 1))+min; 
+		}
+		return newArray; 
+	} 
