@@ -1,20 +1,36 @@
+import java.util.Scanner; 
 
 public class driver {
 
 	public static void main(String[] args) {
 		
-		String s = "Hyundai"; 
-		int c = 89819201; 
-		int my = 2020; 
+		Scanner input = new Scanner(System.in); // initializes memory 
+		Scanner input2 = new Scanner(System.in); 
+		Scanner input3 = new Scanner(System.in);  
 		
-		int HP = 300; 
-		int seats = 4; 
+		Student[] theStudents = new Student[5];
+		String n; 
+		int id; 
+		double g; 
 		
-		Car OOF = new Car(c, my, s,HP,4); 
+		for (int i = 0; i < 5; i++) { 
+			System.out.println("What is the name?"); 
+			n = input.nextLine(); 
+			System.out.println("What is the ID?"); 
+			id = input2.nextInt(); 
+			System.out.println("What is the GPA?"); 
+			g = input3.nextDouble();
+			
+			theStudents[i] = new Student(n,id,g); 
+			
+			
+		}
 		
-		System.out.println("Make of Car: "  +OOF.make);
-		System.out.println("Capacity: " +OOF.seats); //concatenation 
-		System.out.println("Model Year: " +OOF.ModelYear);
+		input.close(); // cleans up memory 
+		input2.close();
+		input3.close(); 
+		
+		
 		
 	}
 
